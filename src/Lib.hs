@@ -1,7 +1,7 @@
 module Lib
     ( payloads
     , pxs
-    , PX (..)
+    , PX(..)
     )
 where
 
@@ -62,7 +62,7 @@ pxs raw =
     in  case dimg of
             Left  err             -> throw $ E err
             Right (ImageRGB8 img) -> pixelFold
-                (\acc x y (PixelRGB8 r g b) -> (PX x y $ rgb8ToHex r g b):acc)
+                (\acc x y (PixelRGB8 r g b) -> (PX x y $ rgb8ToHex r g b) : acc)
                 []
                 img
             Right _ -> throw $ E "Don't know image format"

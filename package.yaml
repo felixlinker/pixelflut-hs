@@ -24,7 +24,6 @@ dependencies:
 - random
 - bytedump
 - random-shuffle
-- parseargs
 
 library:
   source-dirs: src
