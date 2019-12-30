@@ -16,7 +16,7 @@ import qualified Data.ByteString.Char8         as B
 
 data PX = PX Int Int String
 instance Show PX where
-    show (PX x y hex) = printf "PX %d %d %s" x y hex
+    show (PX x y hex) = printf "PX %d %d %s\n" x y hex
 
 shift :: Int -> Int -> PX -> PX
 shift dx dy (PX x y c) = PX (x + dx) (y + dy) c
